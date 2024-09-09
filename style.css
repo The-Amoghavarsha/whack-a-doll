@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background-image: url("w.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+h1 {
+    text-align: center;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.score {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    border-radius: 1rem;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    display: block;
+    background: url(re.svg) bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    bottom: -40px;
+}
+
+.doll {
+    background: url("doll.png") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
+.start-button, .stop-button {
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+
+.start-button {
+    background-color: #4CAF50; 
+}
+
+.start-button:hover {
+    background-color: #45a049;
+}
+
+.stop-button {
+    background-color: #f44336; 
+}
+
+.stop-button:hover {
+    background-color: #e53935; 
+}
+
+.hole.up .doll {
+    top: 0;
+}
+
+.restart-button {
+    background-color: #2196F3; /* Blue for Restart button */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.restart-button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
